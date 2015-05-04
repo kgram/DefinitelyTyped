@@ -12,6 +12,10 @@ declare function Q<T>(promise: Q.IPromise<T>): Q.Promise<T>;
  * If value is not a promise, returns a promise that is fulfilled with value.
  */
 declare function Q<T>(value: T): Q.Promise<T>;
+/**
+ * If no value, returns a promise fulfilled without value.
+ */
+declare function Q(): Q.Promise<void>;
 
 declare module Q {
     interface IPromise<T> {
